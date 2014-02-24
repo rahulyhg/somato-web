@@ -1,0 +1,23 @@
+[Sat Feb 22 20:57:50 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 20:57:50 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 20:57:51 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 20:57:51 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:00:18 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:00:18 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:13:48 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:13:48 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:16:50 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:16:50 2014] [crit] [client 127.0.0.1] (13)Permission denied: /Users/pauldilyard/Documents/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
+[Sat Feb 22 21:18:18 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:18:18 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:19:17 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:19:17 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:20:35 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:20:35 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:25:29 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:25:29 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:26:00 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:26:01 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:26:01 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
+[Sat Feb 22 21:26:02 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/
+[Sat Feb 22 21:26:02 2014] [error] [client 127.0.0.1] Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden: /Users/pauldilyard/Documents/Websites/somato/public/favicon.ico
