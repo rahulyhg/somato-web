@@ -49,4 +49,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	/*
+	|--------------------------------------------------------------------------
+	| Check Access Key
+	|--------------------------------------------------------------------------
+	| Confirm that you are who we think you are
+	*/
+	public function checkAccessKey($testKey)
+	{
+		if ($testKey == $this->access_key)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 }
