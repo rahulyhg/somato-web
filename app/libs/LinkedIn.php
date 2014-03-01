@@ -22,7 +22,7 @@
 | // code & state are provided by linkedin API
 | // desiredState is the string to prevent CSRF
 |
-| $user = new LinkedIn($apiKey, $secretKey, $redirectUri);
+| $user = new LinkedIn($linkedin);
 |
 | if ($user->checkState())
 | {

@@ -154,21 +154,63 @@ class UserController extends BaseController {
     */
     public function linkedin()
     {
-        if (Input::has('error'))
+        if (Input::has('error') || !Input::has('code'))
         {
-            // Handle denied request
+            /**
+            * @todo
+            * Handle denied request
+            */
         }
         else
         {
+            // Set up API library
             $input = Input::all();
             $linkedin = array(
-                'apiKey' => Config::get('linkedin.apiKey'),
-                'secretKey' => Config::get('linkedin.secretKey'),
-                'redirectUri' => ,
+                'apiKey' => Config::get('app.linkedin.apiKey'),
+                'secretKey' => Config::get('app.linkedin.secretKey'),
+                'redirectUri' => 'http://www.somatocards.com/user/linkedin',
                 'code' => $input['code'],
                 'state' => $input['state'],
-                'desiredState' => 'u0NepzEM6SwgUYCq'
+                'desiredState' => Config::get('app.linkedin.desiredState')
             );
+
+            $user = new Linkedin($linkedin);
+
+            if ($user->checkState)
+            {
+                $user->getProfile();
+
+                // Save the new user
+                $newUser = new User;
+                $newUser->access_key = $user->accessToken;
+                $newUser->first_name = $user->firstName;
+                $newUser->last_name = $user->lastName;
+                $newUser->email = $user->email;
+                $newUser->network = 'linkedin';
+
+                try
+                {
+                    $newUser->save();
+                }
+                catch (Exception $e)
+                {
+                    $newUser->id = 0;
+                    $newUser->access_key = 0;
+                }
+
+                /**
+                * @todo
+                * Login linkedin user (Cloud Messaging?)
+                * Show success view
+                */
+            }
+            else
+            {
+                /**
+                * @todo
+                * Handle CSRF
+                */
+            }
         }
     }
 

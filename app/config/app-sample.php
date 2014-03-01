@@ -183,7 +183,8 @@ return array(
 	'linkedin' => array(
 
 		'apiKey' => 'DEVELOPER_API_KEY',
-		'secretKey' => 'DEVELOPER_SECRET_KEY'
+		'secretKey' => 'DEVELOPER_SECRET_KEY',
+		'desiredState' => 'PREVENT_CSRF'
 
 	),
 
