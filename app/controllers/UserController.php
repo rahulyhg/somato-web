@@ -154,7 +154,22 @@ class UserController extends BaseController {
     */
     public function linkedin()
     {
-        // Register a new linkedin user
+        if (Input::has('error'))
+        {
+            // Handle denied request
+        }
+        else
+        {
+            $input = Input::all();
+            $linkedin = array(
+                'apiKey' => Config::get('linkedin.apiKey'),
+                'secretKey' => Config::get('linkedin.secretKey'),
+                'redirectUri' => ,
+                'code' => $input['code'],
+                'state' => $input['state'],
+                'desiredState' => 'u0NepzEM6SwgUYCq'
+            );
+        }
     }
 
     /*
