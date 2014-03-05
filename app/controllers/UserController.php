@@ -78,13 +78,21 @@ class UserController extends BaseController {
             $user->access_key = $newAccessKey;
             $user->save();
 
+            // Create array of user info
+            $userInfo = array(
+                'id' => Auth::user()->id,
+                'accessKey' => $newAccessKey,
+                'success' => true
+            );
+
             // Return the user object
-            return Response::json(Auth::user());
+            return Response::json($userInfo);
         }
         else
         {
             // Authentication failed
-            return "FAIL";
+            $fail = array('success' => false);
+            return Response::json($fail);
         }
     }
 
