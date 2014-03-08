@@ -39,7 +39,15 @@ class UserController extends BaseController {
         $user->password = $info['password'];
         $user->network = $info['network'];
 
-        $user->save();
+        try
+        {
+            $user->save();
+        }
+        catch (Exception $e)
+        {
+            $user->id = 0;
+            $user->access_key = 0;
+        }
 
         // Return JSON string of id and access_key
         return Response::json(array(
