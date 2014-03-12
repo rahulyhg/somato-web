@@ -1,0 +1,11 @@
+<svg class="card" width="480" height="640" xmlns="http://www.w3.org/2000/svg">
+ <g transform="rotate(90) translate(0, -480)">
+  <title>Paul Dilyard</title>
+  <rect id="svg_7" height="481" width="642" y="-1" x="3" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#000000"/>
+  <rect transform="rotate(-90 70.5 180)" id="svg_1" height="87" width="746" y="136.5" x="-302.50001" stroke-width="5" fill="#66c3e8" stroke="#000000"/>
+  <text fill="#ffffff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="210.21244" y="40.47496" id="svg_2" font-size="24" font-family="verdana, sans-serif" text-anchor="middle" xml:space="preserve" transform="matrix(2.71193 0 0 2.71193 -233.251 -29.9588)" stroke="#000000">Paul Dilyard</text>
+  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="282" y="119" id="svg_3" font-size="24" font-family="verdana, sans-serif" text-anchor="middle" xml:space="preserve">Student at Kent State</text>
+  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="267" y="409" id="svg_4" font-size="24" font-family="verdana, sans-serif" text-anchor="middle" xml:space="preserve">Cell: 330-347-3746</text>
+  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="277" y="446" font-size="24" font-family="verdana, sans-serif" text-anchor="middle" xml:space="preserve" id="svg_5">Office: 330-555-5555</text>
+ </g>
+</svg>

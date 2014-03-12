@@ -45,13 +45,32 @@ class CardController extends BaseController {
     */
     public function getCurrent($userId)
     {
+        // Get the user's current card
         $card = Card::where('user_id', '=', $userId)
                     ->where('current', '=', true)
-                    ->get();
+                    ->first();
 
+        // Get the user
         $user = User::find($userId);
 
+        // Add user info to card
+        $card->first_name = $user->first_name;
+        $card->last_name = $user->last_name;
+
+        // Get the template
         $template = Template::find($card->template_id);
+
+        // Put the card data into the template
+        $builder = new CardBuilder($card, $template);
+        $builder->assemble();
+
+        // Write the card to a file
+        $file = fopen('cards/'.$card->id.'.svg', 'w');
+        fwrite($file, $builder->product);
+        fclose($file);
+
+        // Show the card
+        return View::make('cards.card', array('svg' => $card->id));
     }
 
     /*
