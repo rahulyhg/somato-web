@@ -1,3 +1,2 @@
-<?php `git pull origin master`
-    `../php artisan migrate`
- ?>
+<?php `git pull origin master` ?>
+<?php `php artisan migrate` ?>
