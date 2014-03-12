@@ -42,7 +42,7 @@ class UserController extends BaseController {
         $user->save();
 
         // Create a default card
-        $request = Request::create('card/create/default', 'POST');
+        $request = Request::create('card/create/default/' . $user->id, 'POST');
         Route::dispatch($request);
 
         // Return JSON string of id and access_key
