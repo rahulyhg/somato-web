@@ -15,6 +15,13 @@ class CardController extends BaseController {
     |
     */
 
+    /*
+    |--------------------------------------------------------------------------
+    | Make Default Card
+    |--------------------------------------------------------------------------
+    | Run on registration
+    | Creates a default card for the user to have on first log in
+    */
     public function makeDefaultCard($userId)
     {
         // Get user
@@ -28,6 +35,35 @@ class CardController extends BaseController {
         $card->email = $user->email;
 
         $card->save();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Get current card
+    |--------------------------------------------------------------------------
+    | Get's a user's currently selected card
+    */
+    public function getCurrent($userId)
+    {
+        $card = Card::where('user_id', '=', $userId)
+                    ->where('current', '=', true)
+                    ->get();
+
+        $user = User::find($userId);
+
+        $template = Template::find($card->template_id);
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Get card by id
+    |--------------------------------------------------------------------------
+    | Pull a card by it's id
+    | Used to download another person's card
+    */
+    public function get($cardId)
+    {
+
     }
 
 }

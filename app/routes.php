@@ -54,4 +54,10 @@ Route::get('user/{id}', array('uses' => 'UserController@getUser'));
 */
 
 // Create a default card for a user
-Route::post('card/create/default/{id}', array('uses' => 'CardController@makeDefaultCard'));
+Route::post('card/create/default/{user_id}', array('uses' => 'CardController@makeDefaultCard'));
+
+// Get the user's current card
+Route::get('card/get/current/{user_id}', array('uses' => 'CardController@getCurrent'));
+
+// Get a card by id
+Route::get('card/get/{card_id}', array('uses' => 'CardController@get'));
