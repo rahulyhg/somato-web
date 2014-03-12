@@ -39,15 +39,11 @@ class UserController extends BaseController {
         $user->password = $info['password'];
         $user->network = $info['network'];
 
-        try
-        {
-            $user->save();
-        }
-        catch (Exception $e)
-        {
-            $user->id = 0;
-            $user->access_key = 0;
-        }
+        $user->save();
+
+        // Create a default card
+        $request = Request::create('card/create/default', 'POST');
+        Route::dispatch($request);
 
         // Return JSON string of id and access_key
         return Response::json(array(
