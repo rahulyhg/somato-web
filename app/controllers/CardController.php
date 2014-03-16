@@ -1,19 +1,13 @@
 <?php
 
-class CardController extends BaseController {
+/*
+|--------------------------------------------------------------------------
+| Card Controller
+|--------------------------------------------------------------------------
+| Create, update, delete, cards
+*/
 
-    /*
-    |--------------------------------------------------------------------------
-    | Default Home Controller
-    |--------------------------------------------------------------------------
-    |
-    | You may wish to use controllers instead of, or in addition to, Closure
-    | based routes. That's great! Here is an example controller method to
-    | get you started. To route to this controller, just add the route:
-    |
-    |   Route::get('/', 'HomeController@showWelcome');
-    |
-    */
+class CardController extends BaseController {
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +76,28 @@ class CardController extends BaseController {
     */
     public function get($cardId)
     {
+        // Get the card
+        $card = Card::find($cardId);
 
+        // Add user info
+        $user = User::find($card->user_id);
+        $card->first_name = $user->first_name;
+        $card->last_name = $user->last_name;
+
+        // Get the template
+        $template = Template::find($card->template_id);
+
+        // Build the card
+        $builder = new CardBuilder($card, $template);
+        $builder->assemble();
+
+        // Write the card to a file
+        $file = fopen('cards/'.$card->id.'.svg', 'w');
+        fwrite($file, $builder->product);
+        fclose($file);
+
+        // Show the card
+        return View::make('cards.card', array('svg' => $card->id));
     }
 
 }

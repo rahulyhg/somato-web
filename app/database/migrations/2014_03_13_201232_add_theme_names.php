@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCodeToTemplates extends Migration {
+class AddThemeNames extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,7 +14,7 @@ class AddCodeToTemplates extends Migration {
 	{
 		Schema::table('templates', function($table)
 		{
-			$table->text('map')->after('default');
+			$table->string('name')->after('default');
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddCodeToTemplates extends Migration {
 	{
 		Schema::table('templates', function($table)
 		{
-			$table->dropColumn('map');
+			$table->dropColumn('name');
 		});
 	}
 

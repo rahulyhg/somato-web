@@ -49,7 +49,6 @@ Route::get('user/{id}', array('uses' => 'UserController@getUser'));
 |--------------------------------------------------------------------------
 |
 | Business card related routes
-| Includes theme creator
 |
 */
 
@@ -61,3 +60,18 @@ Route::get('card/get/current/{user_id}', array('uses' => 'CardController@getCurr
 
 // Get a card by id
 Route::get('card/get/{card_id}', array('uses' => 'CardController@get'));
+
+/*
+|--------------------------------------------------------------------------
+| Templates
+|--------------------------------------------------------------------------
+|
+| Template creator web app
+|
+*/
+
+// Template creator JS app (new or resume editing)
+Route::get('template/creator/{id?}', array('uses' => 'TemplateController@creator'));
+
+// Save a template from the creator
+Route::post('template/save', array('uses' => 'TemplateController@save'));
