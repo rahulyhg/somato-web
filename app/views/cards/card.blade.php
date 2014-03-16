@@ -9,9 +9,9 @@
     {
         width: 100%;
         border-radius: 10px;
-        -moz-box-shadow:    0px 0px 10px 3px #5c5c5c;
-        -webkit-box-shadow: 0px 0px 10px 3px #5c5c5c;
-        box-shadow:         0px 0px 10px 3px #5c5c5c;
+        -moz-box-shadow:    0px 0px 10px 3px #a7a7a7;
+        -webkit-box-shadow: 0px 0px 10px 3px #a7a7a7;
+        box-shadow:         0px 0px 10px 3px #a7a7a7;
     }
 </style>
 
