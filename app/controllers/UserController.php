@@ -62,7 +62,12 @@ class UserController extends BaseController {
     */
     public function login()
     {
-        $creds = Input::only('email', 'password', 'device_name');
+        $input = Input::only('email', 'password', 'device_name');
+
+        $creds = array(
+            'email' => $input['email'],
+            'password' => $input['password']
+        );
 
         if(Auth::once($creds))
         {
@@ -72,7 +77,7 @@ class UserController extends BaseController {
             // Save the new access key
             $user = User::find(Auth::user()->id);
             $user->access_key = $newAccessKey;
-            $user->device_name = $creds['device_name'];
+            $user->device_name = $input['device_name'];
             $user->save();
 
             // Create array of user info
