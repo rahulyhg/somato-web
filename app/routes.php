@@ -75,3 +75,15 @@ Route::get('template/creator/{id?}', array('uses' => 'TemplateController@creator
 
 // Save a template from the creator
 Route::post('template/save', array('uses' => 'TemplateController@save'));
+
+/*
+|--------------------------------------------------------------------------
+| Sharing
+|--------------------------------------------------------------------------
+|
+| Helpers to get nearby users
+|
+*/
+
+// Get a list of users from a list of device names
+Route::post('share/wifi', array('uses' => 'ShareController@wifi'));
